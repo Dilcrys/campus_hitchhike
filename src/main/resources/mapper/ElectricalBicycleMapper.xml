@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lmx.hitchhike.mapper.ElectricalBicycleMapper">
+
+    <resultMap id="BaseResultMap" type="com.lmx.hitchhike.entity.ElectricalBicycle">
+            <id property="bicycleId" column="bicycle_id" jdbcType="BIGINT"/>
+            <result property="ownerId" column="owner_id" jdbcType="BIGINT"/>
+            <result property="bicycleNumber" column="bicycle_number" jdbcType="VARCHAR"/>
+            <result property="bicycleBrand" column="bicycle_brand" jdbcType="VARCHAR"/>
+            <result property="bicycleImage" column="bicycle_image" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        bicycle_id,owner_id,bicycle_number,
+        bicycle_brand,bicycle_image
+    </sql>
+</mapper>

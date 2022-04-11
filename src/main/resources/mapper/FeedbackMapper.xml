@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lmx.hitchhike.mapper.FeedbackMapper">
+
+    <resultMap id="BaseResultMap" type="com.lmx.hitchhike.entity.Feedback">
+            <id property="feedbackId" column="feedback_id" jdbcType="BIGINT"/>
+            <result property="passengerId" column="passenger_id" jdbcType="BIGINT"/>
+            <result property="ownerId" column="owner_id" jdbcType="BIGINT"/>
+            <result property="webId" column="web_id" jdbcType="BIGINT"/>
+            <result property="feedbackContent" column="feedback_content" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        feedback_id,passenger_id,owner_id,
+        web_id,feedback_content
+    </sql>
+</mapper>

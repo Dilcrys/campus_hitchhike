@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lmx.hitchhike.mapper.ApproveMapper">
+
+    <resultMap id="BaseResultMap" type="com.lmx.hitchhike.entity.Approve">
+            <id property="approveId" column="approve_id" jdbcType="BIGINT"/>
+            <result property="webId" column="web_id" jdbcType="BIGINT"/>
+            <result property="passengerId" column="passenger_id" jdbcType="BIGINT"/>
+            <result property="ownerId" column="owner_id" jdbcType="BIGINT"/>
+            <result property="approveName" column="approve_name" jdbcType="VARCHAR"/>
+            <result property="approveClass" column="approve_class" jdbcType="VARCHAR"/>
+            <result property="approveNumber" column="approve_number" jdbcType="VARCHAR"/>
+            <result property="approveState" column="approve_state" jdbcType="CHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        approve_id,web_id,passenger_id,
+        owner_id,approve_name,approve_class,
+        approve_number,approve_state
+    </sql>
+</mapper>

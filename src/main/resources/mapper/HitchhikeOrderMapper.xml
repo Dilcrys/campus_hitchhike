@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lmx.hitchhike.mapper.HitchhikeOrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.lmx.hitchhike.entity.HitchhikeOrder">
+            <id property="orderId" column="order_id" jdbcType="BIGINT"/>
+            <result property="passengerId" column="passenger_id" jdbcType="BIGINT"/>
+            <result property="ownerId" column="owner_id" jdbcType="BIGINT"/>
+            <result property="firstTime" column="first_time" jdbcType="VARCHAR"/>
+            <result property="lastTime" column="last_time" jdbcType="VARCHAR"/>
+            <result property="origin" column="origin" jdbcType="VARCHAR"/>
+            <result property="destination" column="destination" jdbcType="VARCHAR"/>
+            <result property="orderState" column="order_state" jdbcType="CHAR"/>
+            <result property="orderNote" column="order_note" jdbcType="VARCHAR"/>
+            <result property="releaseType" column="release_type" jdbcType="CHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        order_id,passenger_id,owner_id,
+        first_time,last_time,origin,
+        destination,order_state,order_note,
+        release_type
+    </sql>
+</mapper>
